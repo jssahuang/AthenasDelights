@@ -56,9 +56,28 @@ function display() {
             myIngredientsDiv.className = "ingredients";
             let myRecipesDiv = document.createElement("div");
             myRecipesDiv.className = "recipe";
+            let likes = document.createElement("div");
+            likes.className = "likes";
+            likes.innerHTML = "<p>" + response[i].likes + " likes</p>";
+            let button = document.createElement("button");
+            button.innerHTML = "Like this recipe";
+            button.addEventListener("click", function() {
 
+                fetch("http://127.0.0.1:5000/like/", {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(response[i].name)
+            })
+                .then(response => response.json())
+                .then(response => {
+
+                    document.getElementsByClassName("likes")[i].innerHTML = response.likes + " likes";
+                    }
+                )
+            })
             let name = document.createElement("p");
-
             name.innerHTML = response[i].name;
             let ingredients = document.createElement("p");
             ingredients.innerHTML = response[i].ingredients;
@@ -70,18 +89,10 @@ function display() {
             content.appendChild(myNameDiv);
             content.appendChild(myIngredientsDiv);
             content.appendChild(myRecipesDiv);
+            content.appendChild(likes);
+            content.appendChild(button);
             myDisplay.appendChild(content);
-        //      div sweet-tod, div sweet-tod-content, div name, div ingredients, div recipe,
         }
-        // if (Object.keys(response).length >= 1) {
-        //     let name = document.getElementById("name");
-        //     name.innerHTML = "<p>" + response[0].name + "</p>";
-        //     let ingredients = document.getElementById("ingredients");
-        //     ingredients.innerHTML = "<p>Ingredients</p><p>" + response[0].ingredients + "</p>"
-        //     let recipe = document.getElementById("recipe");
-        //     recipe.innerHTML = "<p>Recipe</p><p>" + response[0].instructions + "</p>"
-        // }
-
     })
 
 }
