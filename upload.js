@@ -8,7 +8,7 @@ function upload() {
         ingredients: recipeIngredients,
         instructions: recipeInstructions
     }
-    fetch("http://127.0.0.1:5000/input/", {
+    fetch("http://127.0.0.1:5000/upload/", {
         method: 'POST',
         headers: {
             'Content-type':'application/json'
