@@ -67,12 +67,19 @@ h1 {
       border-radius: 10px;
       border-color: #EFC3E6;
       padding: 20px;
-      margin: 60px auto 140px;
+      margin: 60px auto ;
       font-weight: bold;
       font-size: 1.3em;
       overflow: hidden;
 }
-
+#search-content #icon {
+      display: inline-block;
+      width: 55px;
+      margin-bottom: -25px;
+}
+#search-content label{
+      display: inline-block;
+}
 #search-content button {
       margin-top: 10px; /* Adjust margin as needed */
       font-family: 'Quicksand', sans-serif;
@@ -115,14 +122,20 @@ h1 {
       border-radius: 5px;
       border-color: white;
 }
-
-#sweet-tod {
+/*turned these into classes*/
+/*sweet-tod, sweet-tod-content, resultsImg, name, ingredients, recipe,  */
+.sweet-tod {
+      width: 1270px;
+      margin: 0 auto;
+      display: none;
+}
+#sweet-tod-id {
       width: 1270px;
       margin: 0 auto;
       display: none;
 }
 
-#sweet-tod-content {
+.sweet-tod-content {
       background-color: #F0A6CA;
       color: white;
       border-style: solid;
@@ -130,24 +143,57 @@ h1 {
       border-radius: 10px;
       border-color: #EFC3E6;
       padding: 20px;
-      margin: 60px auto 140px;
+      margin: 60px auto;
       font-weight: bold;
     font-size: 1.3em;
 }
 
-#name {
+.name {
       margin: 10px;
       font-weight: bold;
       font-size: 1.5em;
 }
 
-#ingredients, #recipe {
+.ingredients, .recipe {
       background-color: #EFC3E6;
       color: white;
       height: 100px;
       padding: 20px;
       margin-top: 30px;
 }
+
+/*#sweet-tod {*/
+/*      width: 1270px;*/
+/*      margin: 0 auto;*/
+/*      display: none;*/
+/*}*/
+
+/*#sweet-tod-content {*/
+/*      background-color: #F0A6CA;*/
+/*      color: white;*/
+/*      border-style: solid;*/
+/*      border-width: 6px;*/
+/*      border-radius: 10px;*/
+/*      border-color: #EFC3E6;*/
+/*      padding: 20px;*/
+/*      margin: 60px auto 140px;*/
+/*      font-weight: bold;*/
+/*    font-size: 1.3em;*/
+/*}*/
+
+/*#name {*/
+/*      margin: 10px;*/
+/*      font-weight: bold;*/
+/*      font-size: 1.5em;*/
+/*}*/
+
+/*#ingredients, #recipe {*/
+/*      background-color: #EFC3E6;*/
+/*      color: white;*/
+/*      height: 100px;*/
+/*      padding: 20px;*/
+/*      margin-top: 30px;*/
+/*}*/
 
 
 #footer {
@@ -198,6 +244,58 @@ h1 {
   }
   100% {
         margin-left: calc(100% + 100px);
+  }
+}
+
+#image-container {
+    margin-top: -50px;
+    margin-bottom: 59px;
+    height: 160px;
+    display: none;
+  /*position: relative;*/
+
+  img {
+      /*left: 43%;*/
+      /*top: -25%;*/
+      margin-left: 7%;
+
+      width: 200px;
+      display: inline-block;
+    /*position: absolute;*/
+    animation-name: multiple-image-crossfade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    &:nth-of-type(1) {
+      animation-delay: 0s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 2s;
+    }
+      &:nth-of-type(3) {
+      animation-delay: 4s;
+    }
+      &:nth-of-type(4) {
+      animation-delay: 6s;
+    }
+  }
+}
+
+@keyframes multiple-image-crossfade {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
   }
 }
 
