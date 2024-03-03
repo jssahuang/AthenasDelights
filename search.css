@@ -103,6 +103,7 @@ h1 {
 #sweet-tod {
       width: 1270px;
       margin: 0 auto;
+      display: none;
 }
 
 #sweet-tod-content {
