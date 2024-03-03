@@ -1,8 +1,13 @@
 function search() {
     console.log("search clicked");
-    let userInput = document.getElementById("search");
+    let userInput = document.getElementById("search").value;
     fetch("http://127.0.0.1:5000/search/" + userInput).then(response => response.json()).then(response => {
         console.log(response);
+        let myDisplay = document.getElementById("display");
+        let val = (response);
+        let myRecipe = val.hits[0].recipe.label;
+        console.log(myRecipe);
+        myDisplay.innerHTML = myRecipe;
 
     })
 
