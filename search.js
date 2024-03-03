@@ -3,7 +3,7 @@ function search() {
     let userInput = document.getElementById("search").value;
     var myDisplay = document.getElementById("sweet-tod-id");
     myDisplay.style.display = "block";
-    fetch("http://127.0.0.1:5000/search/" + userInput).then(response => response.json()).then(response => {
+    fetch("https://athena-sdelights.wl.r.appspot.com/search/" + userInput).then(response => response.json()).then(response => {
         console.log(response);
         let val = (response);
         let myRecipe_label = val.hits[0].recipe.label;
