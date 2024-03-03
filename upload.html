@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Upload</title>
+    <script src="./upload.js"></script>
+    <link rel="stylesheet" href="upload.css">
 </head>
 <body>
-
+    <label for="name">Name of Recipe</label>
+    <input name="name" id="name" type="text">
+    <br>
+    <label for="ingredients">Ingredients</label>
+    <textarea id="ingredients" name="ingredients"></textarea>
+    <br>
+    <label for="instructions">Instructions</label>
+    <textarea id="instructions" name="instruction"></textarea>
+    <br>
+    <button onClick="upload()">Upload Recipe</button>
 </body>
 </html>
