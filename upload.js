@@ -18,7 +18,7 @@ function upload() {
     })
         .then(response => {
 
-            window.location.replace("./uploadsuccessful.html");
+            // window.location.replace("./uploadsuccessful.html");
         })
 }
 //
