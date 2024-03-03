@@ -48,6 +48,7 @@ function display() {
             likes.className = "likes";
             likes.innerHTML = "<p>" + response[i].likes + " likes</p>";
             let button = document.createElement("button");
+            button.className = "likebutton";
             button.innerHTML = "Like this recipe";
             button.addEventListener("click", function() {
 
