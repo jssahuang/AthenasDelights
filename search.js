@@ -4,10 +4,26 @@ function search() {
     var myDisplay = document.getElementById("sweet-tod-id");
     myDisplay.style.display = "block";
     fetch("https://athena-sdelights.wl.r.appspot.com/search/" + userInput).then(response => response.json()).then(response => {
-        console.log(response);
+        console.log("First API response:", response);
         let val = (response);
         let myRecipe_label = val.hits[0].recipe.label;
         console.log(myRecipe_label);
+        fetch("https://api.api-ninjas.com/v1/recipe?query=" + myRecipe_label, {
+               method: 'GET',
+               headers: { 'X-Api-Key': 'rNvdGeN2iHIRpXStOxgo8g==WcbTXiq7tZ6rnOwB' },
+               contentType: 'application/json'
+           }).then(response => response.json())
+       .then(response => {
+           console.log("Second API response:", response);
+
+           // Process response and update DOM
+           let myRecipe_directions = (response[0]).instructions;
+          console.log(myRecipe_directions);
+//            let myRecipDir = document.getElementById("footer");
+//            myRecipDir.innerHTML = '';
+//            myRecipDir.innerHTML = "<p>" + myRecipe_directions + "</p>";
+
+
         let myRecipe_ingredients = val.hits[0].recipe.ingredientLines;
         console.log(myRecipe_ingredients);
         let myRecipe_image = val.hits[0].recipe.image;
@@ -18,11 +34,14 @@ function search() {
         console.log(myRecipe_dietLabels);
         let myRecipe_url = val.hits[0].recipe.url;
         console.log(myRecipe_url);
+        let myRecipe_instruct = val.hits[0].recipe.instructions;
+        console.log(myRecipe_instruct);
         myDisplay.innerHTML = '';
-        myDisplay.innerHTML =  `<div class="sweet-tod-content"><img src="${myRecipe_image}" id="resultsImg" /><div id="name"><p>${myRecipe_label}</p></div><div class="ingredients"><p>${myRecipe_ingredients}</p></div><div class="recipe"><p>${val.hits[0].recipe.url}</p></div></div> </div>`
+        myDisplay.innerHTML =  `<div class="sweet-tod-content"><img src="${myRecipe_image}" id="resultsImg" /><div id="name"><p>${myRecipe_label}</p></div><div class="ingredients"><p>${myRecipe_ingredients}</p></div><div class="recipe"><p>${myRecipe_directions}</p></div></div> </div>`
         // myDisplay.innerHTML = "<p>" + myRecipe_label + "<br>" + myRecipe_ingredients + "<br>"
         // + "<img src='"+ myRecipe_image + "' alt= 'it is a dessert.'>" + "<br>"
         // + myRecipe_cuisine + "<br>" + myRecipe_dietLabels + "<br>" + "</p>";
+        })
     })
     .catch(error => console.error('Error fetching data:', error));
 }
