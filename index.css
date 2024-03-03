@@ -20,6 +20,15 @@ h1 {
       margin: 0;
 }
 
+#like-button {
+    margin-top: 10px; /* Adjust margin as needed */
+      font-family: 'Quicksand', sans-serif;
+      background-color: #5C4979;
+      color: white;
+      border-color: #5C4979;
+      font-size: 1em;
+      display: block;
+}
 
 #nav {
       width: 950px;
@@ -121,7 +130,7 @@ h1 {
 #ingredients, #recipe {
       background-color: #EFC3E6;
       color: white;
-      height: 100px;
+      /*height: 100px;*/
       padding: 20px;
       margin-top: 30px;
 }
@@ -129,9 +138,9 @@ h1 {
 #footer {
     background-color: white;
     color: #5C4979;
-      margin: 0;
-      height: 150px;
-      position: relative;
+    margin: 0;
+    height: 150px;
+    position: relative;
 }
 #footer p {
       margin-bottom: 0;
@@ -280,5 +289,3 @@ h1 {
     opacity:1;
   }
 }
-
-

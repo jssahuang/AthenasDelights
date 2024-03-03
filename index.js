@@ -10,7 +10,7 @@ function like() {
     console.log("liking the recipe");
     fetch("https://athena-sdelights.wl.r.appspot.com/getRecipes/").then(response => response.json()).then(response => {
         if (Object.keys(response).length >= 1) {
-            fetch("http://127.0.0.1:5000/like/", {
+            fetch("https://athena-sdelights.wl.r.appspot.com/getRecipes/like/", {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
