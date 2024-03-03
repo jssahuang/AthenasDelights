@@ -6,13 +6,61 @@
     <script src="./search.js">
     </script>
     <link rel="stylesheet" href="search.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 </head>
 <body>
+    <div id="header">
+        <div id="header_text">
+            <h1>Athena's Delights</h1>
+        </div>
 
-        <label for="search">Search for Recipe</label>
-        <input name="search" id="search" type = "text">
-        <button onclick="search()" id="searchbutton">Search</button>
-        <div id="display"></div>
+	    <div id="nav-wrapper">
+		    <div id="nav">
+			    <a href="upload.html">Upload</a>
+			    <a href="./index.html">Home</a>
+                <a href="./search.html" class="active">Recipes</a>
+		    </div>
+	    </div>
+    </div>
+
+    <div id="search-div">
+        <div id="search-content">
+            <label for="search">Search for a Recipe: </label>
+            <input name="search" id="search" type = "text"
+                   placeholder="recipe, dessert, number of calories, cuisine, dietary restrictions (dairy-free, gluten-free, etc.)">
+            <button onclick="search()" id="searchbutton">Search</button>
+            <div id="display"></div>
+        </div>
+    </div>
+
+    <div id="sweet-tod">
+        <div id="sweet-tod-content">
+            <h2>Sweet Treat of the Day!</h2>
+            <div id="name">
+                <p>Name</p>
+            </div>
+            <div id="ingredients">
+                <p>Ingredients</p>
+            </div>
+            <div id="recipe">
+                <p>Recipe</p>
+            </div>
+            <div id="pic-of-recipe">
+                <p>pic</p>
+            </div>
+            <div id="keywords">
+                <p>keywords</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>Made at <a href="https://athenahacks.com/" target="_blank">Athena Hacks 2024</a></p>
+        <div id="floating-seal">
+            <img src="floating.gif" id="seal" alt="...">
+        </div>
+        <img src="hero-section-chocobar.png" id="hacks-pic" alt="...">
+    </div>
 
 </body>
 </html>

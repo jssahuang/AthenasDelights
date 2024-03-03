@@ -71,6 +71,19 @@ h1 {
       font-weight: bold;
 }
 
+#cont{
+       background-color: #F0A6CA;
+      color: white;
+      border-style: solid;
+      border-width: 6px;
+      border-radius: 10px;
+      border-color: #EFC3E6;
+      padding: 30px;
+      margin: 60px auto 140px;
+      font-weight: bold;
+      text-align: center;
+}
+
 #form-content input[type="text"], #form-content textarea {
       margin-bottom: 10px;
       width: 100%;
@@ -90,6 +103,14 @@ h1 {
       color: white;
       border-color: #5C4979;
 }
+
+/*#cont button {*/
+/*      margin-top: 10px; !* Adjust margin as needed *!*/
+/*      font-family: 'Quicksand', sans-serif;*/
+/*      background-color: #5C4979;*/
+/*      color: white;*/
+/*      border-color: #5C4979;*/
+/*}*/
 
 #form-content button:hover {
       background-color: white;
@@ -138,4 +159,49 @@ h1 {
 @keyframes frame {
 			0% {left: 0px;}
 			100% { left: calc(80% - 150px); }
+}
+
+#success{
+      display: block;
+      padding: 25px;
+      margin: 0 auto;
+}
+
+
+/* CSS */
+#cont button {
+  background-image: linear-gradient(92.88deg, #5C4979 9.16%, #7338A0 43.89%, #924DBF 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#cont p {
+    font-size: 1.5em;
+}
+
+#cont button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+    font-family: 'Quicksand', sans-serif;
+}
+
+@media (min-width: 768px) {
+  #cont button {
+    padding: 0 2.6rem;
+  }
 }

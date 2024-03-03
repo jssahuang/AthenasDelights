@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="./uploadsuccessful.js"></script>
-    <link rel="stylesheet" href="uploadsuccessful.css">
+    <link rel="stylesheet" href="upload.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 </head>
 <body>
-    <p>Congrats! Your recipe was successfully uploaded.</p>
-    <button onClick="goBack()">Keep Exploring</button>
+     <div id="header">
+            <div id="header_text">
+                <h1>Athena's Delights</h1>
+            </div>
+            <div id="nav-wrapper">
+                <div id="nav">
+                    <a href="upload.html" class="active">Upload</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./search.html">Recipes</a>
+                </div>
+            </div>
+        </div>
+     <div id="cont">
+        <p>Congrats! Your recipe was successfully uploaded.</p>
+         <img src="success.gif" id="success" alt="...">
+        <button onClick="goBack()">Keep Exploring</button>
+     </div>
+
+     <div id="footer">
+        <p>Made at <a href="https://athenahacks.com/" target="_blank">Athena Hacks 2024</a></p>
+        <div id="floating-seal">
+            <img src="floating.gif" id="seal" alt="...">
+        </div>
+        <img src="hero-section-chocobar.png" id="hacks-pic" alt="...">
+    </div>
 </body>
 </html>
