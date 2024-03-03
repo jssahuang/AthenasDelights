@@ -1,9 +1,3 @@
-
-var receipe
-
-function changeValue(value){
-    receipe=value;
-}
 function search() {
     console.log("search clicked");
     let userInput = document.getElementById("search").value;
