@@ -33,7 +33,7 @@ function search() {
         let myRecipe_instruct = val.hits[0].recipe.instructions;
         console.log(myRecipe_instruct);
         myDisplay.innerHTML = '';
-        myDisplay.innerHTML =  `<div class="sweet-tod-content"><img src="${myRecipe_image}" id="resultsImg" /><div id="name"><p>${myRecipe_label}</p></div><div class="ingredients"><p>${myRecipe_ingredients}</p></div><div class="recipe"><p>${myRecipe_directions}</p></div></div> </div>`
+        myDisplay.innerHTML =  `<div class="sweet-tod-content"><img src="${myRecipe_image}" id="resultsImg" /><div class="name"><p>${myRecipe_label}</p></div><div class="ingredients"><p>${myRecipe_ingredients}</p></div><div class="recipe"><p>${myRecipe_directions}</p></div></div> </div>`
         // myDisplay.innerHTML = "<p>" + myRecipe_label + "<br>" + myRecipe_ingredients + "<br>"
         // + "<img src='"+ myRecipe_image + "' alt= 'it is a dessert.'>" + "<br>"
         // + myRecipe_cuisine + "<br>" + myRecipe_dietLabels + "<br>" + "</p>";
