@@ -8,7 +8,7 @@ function clicked() {
 }
 function like() {
     console.log("liking the recipe");
-    fetch("http://127.0.0.1:5000/getRecipes/").then(response => response.json()).then(response => {
+    fetch("https://athena-sdelights.wl.r.appspot.com/getRecipes/").then(response => response.json()).then(response => {
         if (Object.keys(response).length >= 1) {
             fetch("http://127.0.0.1:5000/like/", {
                 method: 'POST',
@@ -31,7 +31,7 @@ function like() {
 
 
 function display() {
-    fetch("http://127.0.0.1:5000/getRecipes/").then(response => response.json()).then(response => {
+    fetch("https://athena-sdelights.wl.r.appspot.com/getRecipes/").then(response => response.json()).then(response => {
         if (Object.keys(response).length >= 1) {
             let name = document.getElementById("name");
             name.innerHTML = "<p>" + response[0].name + "</p>";
