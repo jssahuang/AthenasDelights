@@ -47,7 +47,7 @@ function search() {
 }
 
 function display() {
-    fetch("http://127.0.0.1:5000/getRecipes/").then(response => response.json()).then(response => {
+    fetch("https://athena-sdelights.wl.r.appspot.com/getRecipes/").then(response => response.json()).then(response => {
         if (Object.keys(response).length !== 0) {
             document.getElementById("sweet-tod-id").style.display = "block";
             // document.getElementById("sweet-tod-id").innerHTML = "";
@@ -67,10 +67,11 @@ function display() {
             likes.className = "likes";
             likes.innerHTML = "<p>" + response[i].likes + " likes</p>";
             let button = document.createElement("button");
+            button.className = "likebutton";
             button.innerHTML = "Like this recipe";
             button.addEventListener("click", function() {
 
-                fetch("http://127.0.0.1:5000/like/", {
+                fetch("https://athena-sdelights.wl.r.appspot.com/like/", {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'

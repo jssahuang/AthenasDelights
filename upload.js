@@ -8,7 +8,8 @@ function upload() {
         ingredients: recipeIngredients,
         instructions: recipeInstructions
     }
-    fetch("http://127.0.0.1:5000/upload/", {
+
+    fetch("https://athena-sdelights.wl.r.appspot.com/upload/", {
         method: 'POST',
         headers: {
             'Content-type':'application/json'
@@ -17,14 +18,14 @@ function upload() {
     })
         .then(response => {
 
-            // window.location.replace("./uploadsuccessful.html");
+            window.location.replace("./uploadsuccessful.html");
         })
 }
-
+//
 function clicked() {
     console.log("clicked")
     let userInput = document.getElementById("user-input").value;
-    fetch("http://127.0.0.1:5000/input/" + userInput).then(response => response.json()).then(response => {
+    fetch("https://athena-sdelights.wl.r.appspot.com/input/" + userInput).then(response => response.json()).then(response => {
         console.log(response);
         document.getElementById('display').innerHTML = response.user;
     })
