@@ -67,14 +67,17 @@ h1 {
       border-radius: 10px;
       border-color: #EFC3E6;
       padding: 20px;
-      margin: 60px auto 140px;
+      margin: 60px auto;
       font-weight: bold;
     font-size: 1.3em;
 }
 
 #sweet-tod {
       width: 1270px;
-      margin: 0 auto;
+        margin-top: 350px;
+      margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #sweet-tod-content {
@@ -85,7 +88,7 @@ h1 {
       border-radius: 10px;
       border-color: #EFC3E6;
       padding: 20px;
-      margin: 60px auto 140px;
+      margin: 60px auto;
       font-weight: bold;
     font-size: 1.3em;
 }
@@ -165,4 +168,98 @@ h1 {
 			0% {left: 0px;}
 			100% { left: calc(80% - 150px); }
 }
+
+.section {
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+    /*overflow: hidden;*/
+    width: 1270px;
+}
+.section img{
+    position: absolute;
+
+    min-width: 500px;
+    min-height: auto;
+    top: -50px;
+    left: 30%;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 7s;
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+}
+
+.last {
+     -webkit-animation-delay: -3s;
+}
+
+@-webkit-keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+.image-container {
+    margin-top: -50px;
+    margin-bottom: 59px;
+    height: 160px;
+  /*position: relative;*/
+
+  img {
+      /*left: 43%;*/
+      /*top: -25%;*/
+      margin-left: 7%;
+
+      width: 200px;
+      display: inline-block;
+    /*position: absolute;*/
+    animation-name: multiple-image-crossfade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    &:nth-of-type(1) {
+      animation-delay: 0s;
+    }
+    &:nth-of-type(2) {
+      animation-delay: 2s;
+    }
+    &:nth-of-type(3) {
+      animation-delay: 4s;
+    }
+    &:nth-of-type(4) {
+      animation-delay: 6s;
+    }
+  }
+}
+
+@keyframes multiple-image-crossfade {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 
