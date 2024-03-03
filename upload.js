@@ -1,8 +1,8 @@
 function upload() {
     console.log("recipe uploaded");
-    let recipeName = document.getElementById("name");
-    let recipeIngredients = document.getElementById("ingredients");
-    let recipeInstructions = document.getElementById("instructions");
+    let recipeName = document.getElementById("name").value;
+    let recipeIngredients = document.getElementById("ingredients").value;
+    let recipeInstructions = document.getElementById("instructions").value;
     let myRecipe = {
         name: recipeName,
         ingredients: recipeIngredients,
@@ -16,7 +16,8 @@ function upload() {
         body: JSON.stringify(myRecipe)
     })
         .then(response => {
-            window.location.replace("./uploadsuccessful.html");
+
+            // window.location.replace("./uploadsuccessful.html");
         })
 }
 
