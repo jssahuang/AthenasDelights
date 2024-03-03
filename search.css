@@ -70,6 +70,7 @@ h1 {
       margin: 60px auto 140px;
       font-weight: bold;
       font-size: 1.3em;
+      overflow: hidden;
 }
 
 #search-content button {
@@ -79,6 +80,21 @@ h1 {
       color: white;
       border-color: #5C4979;
       font-size: 1em;
+      display: block;
+}
+
+#resultsImg {
+      width: 100px;
+      height: auto;
+      display: block;
+  margin-left: -100px; /* Initial position off the screen */
+  animation: moveImage 5s linear infinite;
+}
+
+#search-content img {
+      display: block;
+    padding: 10px;
+    margin: auto;
 }
 
 #search-content input[type="text"] {
@@ -174,5 +190,14 @@ h1 {
 @keyframes frame {
 			0% {left: 0px;}
 			100% { left: calc(80% - 150px); }
+}
+
+@keyframes moveImage {
+			0% {
+    margin-left: -100px;
+  }
+  100% {
+        margin-left: calc(100% + 100px);
+  }
 }
 

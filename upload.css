@@ -102,6 +102,13 @@ h1 {
       background-color: #5C4979;
       color: white;
       border-color: #5C4979;
+    display: block;
+}
+
+#form-content img{
+    display: block;
+    padding: 10px;
+    margin: auto;
 }
 
 /*#cont button {*/
