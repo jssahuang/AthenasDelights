@@ -8,11 +8,7 @@ function search() {
         let val = (response);
         let myRecipe_label = val.hits[0].recipe.label;
         console.log(myRecipe_label);
-        fetch("https://api.api-ninjas.com/v1/recipe?query=" + myRecipe_label, {
-               method: 'GET',
-               headers: { 'X-Api-Key': 'rNvdGeN2iHIRpXStOxgo8g==WcbTXiq7tZ6rnOwB' },
-               contentType: 'application/json'
-           }).then(response => response.json())
+        fetch("https://athena-sdelights.wl.r.appspot.com/searchRecipe/" + myRecipe_label).then(response => response.json())
        .then(response => {
            console.log("Second API response:", response);
 
