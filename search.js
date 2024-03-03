@@ -1,3 +1,9 @@
+
+var receipe
+
+function changeValue(value){
+    receipe=value;
+}
 function search() {
     console.log("search clicked");
     let userInput = document.getElementById("search").value;
@@ -21,6 +27,8 @@ function search() {
 
 
         let myRecipe_ingredients = val.hits[0].recipe.ingredientLines;
+        // changeValue(myRecipe_ingredients)
+        // receipe=myRecipe_ingredients
         console.log(myRecipe_ingredients);
         let myRecipe_image = val.hits[0].recipe.image;
         console.log(myRecipe_image);
@@ -58,6 +66,8 @@ function display() {
             let myIngredientsDiv = document.createElement("div");
             myIngredientsDiv.className = "ingredients";
             let myRecipesDiv = document.createElement("div");
+            // myRecipesDiv.value=receipe;
+            // myRecipesDiv.disabled=true
             myRecipesDiv.className = "recipe";
             let likes = document.createElement("div");
             likes.className = "likes";
