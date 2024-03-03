@@ -5,17 +5,40 @@
     <title>Upload</title>
     <script src="./upload.js"></script>
     <link rel="stylesheet" href="upload.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+
 </head>
 <body>
-    <label for="name">Name of Recipe</label>
-    <input name="name" id="name" type="text">
-    <br>
-    <label for="ingredients">Ingredients</label>
-    <textarea id="ingredients" name="ingredients"></textarea>
-    <br>
-    <label for="instructions">Instructions</label>
-    <textarea id="instructions" name="instruction"></textarea>
-    <br>
-    <button onClick="upload()">Upload Recipe</button>
+    <div id="header">
+        <div id="header_text">
+            <h1>Athena's Delights</h1>
+        </div>
+
+	    <div id="nav-wrapper">
+		    <div id="nav">
+			    <a href="upload.html" class="active">Upload</a>
+			    <a href="./index.html">Home</a>
+                <a href="./search.html">Recipes</a>
+		    </div>
+	    </div>
+    </div>
+
+    <div id="form">
+        <div id="form-content">
+            <label for="name">Name of Recipe</label>
+            <input name="name" id="name" type="text">
+            <br>
+            <label for="ingredients">Ingredients</label>
+            <textarea id="ingredients" name="ingredients"></textarea>
+            <br>
+            <label for="instructions">Instructions</label>
+            <textarea id="instructions" name="instruction"></textarea>
+            <br>
+            <button onClick="upload()">Upload Recipe</button>
+        </div>
+    </div>
+
+
 </body>
 </html>

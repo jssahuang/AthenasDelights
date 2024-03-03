@@ -1,0 +1,99 @@
+body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #F0E6EF;
+}
+
+#header {
+      background-color: #B8BEDD;
+      color: #5C4979;
+      /*height: 700px;*/
+      width: auto;
+      background-size: cover;
+}
+
+h1 {
+      font-size: 5em;
+      text-align: center;
+      line-height: 0px;
+      text-shadow: 5px 5px 5px white;
+      padding: 100px;
+      margin: 0;
+}
+
+
+#nav {
+      width: 950px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size:0;
+      text-align: center;
+}
+
+#nav a {
+      text-decoration: none;
+      background-color: #5C4979;
+      color: white;
+      width: 230px;
+      height: 50px;
+      line-height: 50px;
+      display: inline-block;
+      font-size:21px;
+      text-align: center;
+}
+
+#nav a:hover, #nav a.active:hover {
+      background-color: #EFC3E6;
+      color: white;
+      border-radius: 5px;
+      border-color: #F0A6CA;
+}
+
+#nav a.active {
+      background-color: white;
+      color: #5C4979;
+      text-align: center;
+}
+
+#form {
+      width: 1270px;
+      margin: 0 auto;
+}
+
+#form-content {
+      background-color: #F0A6CA;
+      color: white;
+      border-style: solid;
+      border-width: 6px;
+      border-radius: 10px;
+      border-color: #EFC3E6;
+      padding: 30px;
+      margin: 60px auto 140px;
+      font-weight: bold;
+}
+
+#form-content input[type="text"], #form-content textarea {
+      margin-bottom: 10px;
+      width: 100%;
+      height: 50px;
+      font-family: 'Quicksand', sans-serif;
+}
+
+#form-content label {
+      display: block; /* Display labels as blocks to stack them vertically */
+      margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+#form-content button {
+      margin-top: 10px; /* Adjust margin as needed */
+      font-family: 'Quicksand', sans-serif;
+      background-color: #5C4979;
+      color: white;
+      border-color: #5C4979;
+}
+
+#form-content button:hover {
+      background-color: white;
+      color: #5C4979;
+      border-radius: 5px;
+      border-color: white;
+}
