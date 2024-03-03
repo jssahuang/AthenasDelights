@@ -251,19 +251,6 @@ h1 {
       animation-timing-function: linear;
 }
 
-@keyframes frame {
-			0% {left: 0px;}
-			100% { left: calc(80% - 150px); }
-}
-
-@keyframes moveImage {
-			0% {
-    margin-left: -100px;
-  }
-  100% {
-        margin-left: calc(100% + 100px);
-  }
-}
 
 #image-container {
     margin-top: -50px;
