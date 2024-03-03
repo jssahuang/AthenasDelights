@@ -101,11 +101,11 @@ h1 {
 }
 
 #resultsImg {
-      width: 100px;
+      width: 200px;
       height: auto;
       display: block;
-  margin-left: -100px; /* Initial position off the screen */
-  animation: moveImage 5s linear infinite;
+  margin-left: 10px; /* Initial position off the screen */
+  /*animation: moveImage 5s linear infinite;*/
 }
 
 #search-content img {
@@ -256,14 +256,14 @@ h1 {
 			100% { left: calc(80% - 150px); }
 }
 
-@keyframes moveImage {
-			0% {
-    margin-left: -100px;
-  }
-  100% {
-        margin-left: calc(100% + 100px);
-  }
-}
+/*@keyframes moveImage {*/
+/*			0% {*/
+/*    margin-left: -100px;*/
+/*  }*/
+/*  100% {*/
+/*        margin-left: calc(100% + 100px);*/
+/*  }*/
+/*}*/
 
 #image-container {
     margin-top: -50px;
