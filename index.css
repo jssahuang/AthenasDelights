@@ -71,6 +71,16 @@ h1 {
       font-weight: bold;
     font-size: 1.3em;
 }
+#about-content h2 {
+    display: inline-block;
+}
+#about-content img {
+    display: inline-block;
+    width: 57px;
+    height: auto;
+    margin-bottom: -17px;
+    padding-left: 15px;
+}
 
 #sweet-tod {
       width: 1270px;
@@ -91,6 +101,15 @@ h1 {
       margin: 60px auto;
       font-weight: bold;
     font-size: 1.3em;
+}
+
+#sweet-tod-content h2{
+    display: inline-block;
+}
+
+#sweet-tod-content img{
+    display: inline-block;
+    width: 70px;
 }
 
 #name {

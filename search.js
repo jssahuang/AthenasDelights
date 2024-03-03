@@ -3,6 +3,8 @@ function search() {
     let userInput = document.getElementById("search").value;
     var text = document.getElementById("sweet-tod");
     text.style.display = "block";
+    var textx = document.getElementById("image-container");
+    textx.style.display = "block";
     fetch("http://127.0.0.1:5000/search/" + userInput).then(response => response.json()).then(response => {
         console.log(response);
         let myDisplay = document.getElementById("display");
